@@ -1,3 +1,4 @@
+
 #include"stdio.h"
 
 void main (){
@@ -5,9 +6,8 @@ void main (){
 	printf("Enter an Integer : ");
 	fflush (stdin);fflush (stdout);
 	scanf ("%d" ,&num);
-	for(i=0;i<num;i++){
+	for(i=0;i<=num;i++){
 		sum=sum+i;
 	}
 	printf("sum = %d",sum);
 }
-
