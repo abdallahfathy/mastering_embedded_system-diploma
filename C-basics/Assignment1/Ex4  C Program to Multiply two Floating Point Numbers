@@ -5,7 +5,7 @@ void main (){
 	printf("Enter two numbers: ");
 	fflush(stdin);fflush(stdout);
 	scanf ("%f %f",&x,&y);
-	printf("product : %f",x*y);
+	printf("product : %.2f",x*y);
 
 }
 
