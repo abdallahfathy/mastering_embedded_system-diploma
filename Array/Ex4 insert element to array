@@ -1,1 +1,40 @@
 
+#include"stdio.h"
+
+int main (){
+
+	int m1 [10],m2[10],ele;
+	int num ,i,j=0,loc;
+	printf ("Enter no of elements : ");
+	fflush(stdout);fflush(stdin);
+	scanf("%d",&num );
+
+
+	for (i=0;i<num;i++){
+		m1[i]=i+1;
+		printf ("%d ",m1[i]);
+		fflush(stdout);fflush(stdin);
+	}
+	printf ("\nEnter  the element to be inserted  :");
+	fflush(stdout);fflush(stdin);
+	scanf("%d",&ele);
+	printf ("Enter  the location  : ");
+	fflush(stdout);fflush(stdin);
+	scanf("%d",&loc);
+
+	for (i=0;i<num;i++){
+		if(j==(loc-1)){
+			m2[j]=ele;
+			printf ("%d ",m2[j]);
+			j++;
+			i--;
+			continue;
+		}
+		m2[j]=m1[i];
+		printf ("%d ",m2[j]);
+		j++;
+
+	}
+
+	return 0;
+}
