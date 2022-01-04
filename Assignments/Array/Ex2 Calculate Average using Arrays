@@ -1,0 +1,17 @@
+#include"stdio.h"
+
+void main (){
+	int num,i ;
+	float matrix [100],sum,avg;
+	printf("Enter the numbers of data : ");
+	fflush(stdout);fflush(stdin);
+	scanf("%d",&num);
+	for(i=0;i<num;i++){
+		printf("%d.enter numbers : ",i+1);
+		fflush(stdout);fflush(stdin);
+		scanf("%f",&matrix[i]);
+		sum+=matrix[i];
+	}
+	avg=sum/num;
+	printf("Average = %.2f",avg);
+}
