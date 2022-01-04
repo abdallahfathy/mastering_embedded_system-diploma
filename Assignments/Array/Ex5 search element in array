@@ -1,1 +1,28 @@
+#include"stdio.h"
 
+int main (){
+
+	int m1 [100],ele;
+	int num ,i,loc=0;
+	printf ("Enter no of elements : ");
+	fflush(stdout);fflush(stdin);
+	scanf("%d",&num );
+
+	for (i=0;i<num;i++){
+		scanf ("%d",&m1[i]);
+	}
+	printf ("Enter  the element to be searched  :");
+	fflush(stdout);fflush(stdin);
+	scanf("%d",&ele);
+
+	for (i=0;i<num;i++){
+		if(m1[i]==ele){
+			loc=i+1 ;
+			printf("number found at the location = %d",loc);
+		}
+
+	}
+
+
+	return 0;
+}
