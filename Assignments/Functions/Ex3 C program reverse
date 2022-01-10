@@ -1,1 +1,21 @@
+#include"stdio.h"
+#include "string.h"
+
+void reversestr ();
+int main (){
+printf("enter a sentence :");
+fflush(stdout);
+reversestr();
+return 0;
+}
+void reversestr ()
+{ char c ;
+	scanf("%c",&c);
+	if(c!='\n')
+	{
+		reversestr();
+		printf("%c",c);
+	}
+
+}
 
