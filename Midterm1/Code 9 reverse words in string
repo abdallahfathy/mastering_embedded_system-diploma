@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+void reverseword(char arr[],int size);
+int main(void)
+{
+	char a[] = {"mohamed gamal"};
+	int size ;
+	size = strlen(a);
+	reverseword(a,size);
+	return 0;
+}
+void reverseword (char arr[], int size){
+	int i=0,j=0,loc;
+	char arr2[size];
+	for(i=0; i<size;i++)
+	{
+		if (arr[i]==' ')
+		{
+			loc=i+1;
+
+			for(j=0;j<(size-loc);j++)
+			{
+				++i;
+				arr2[j]=arr[i];
+				printf("%c",arr2[j]);
+			}
+		}
+	}
+	j++;
+	arr2[j]= ' ';
+	printf("%c",arr2[j]);
+	for(i=0; i<size;i++)
+	{
+		if(arr[i]==' ')
+		{
+			break;
+		}
+		else
+		{
+			arr2[j]=arr[i];
+			printf("%c",arr2[j]);
+			j++;
+		}
+	}
+
+}
+
