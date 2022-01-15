@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+void reversearr (int arr[],int size);
+
+int main(void)
+{
+	int a[5] = {1,2,3,4,5};
+	int size ;
+	size = ((sizeof(a)/sizeof(a[0]))-1);
+	reversearr(a,size);
+	return 0;
+}
+void reversearr (int arr[], int size){
+	int i;
+	for(i= size; i>=0;i--){
+		printf("%d ",arr[i]);
+	}
+}
