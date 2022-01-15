@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+void binum (int num);
+
+int main(void)
+{
+	int x;
+	scanf("%d",&x);
+	fflush(stdin);
+	binum(x);
+	return 0;
+}
+
+void binum (int num){
+	int count=0;
+	while(num>0)
+	{
+		if((num%2)==1)
+		{
+			count++;
+		}
+		num=(num/2);
+	}
+	printf("%d",count);
+
+}
