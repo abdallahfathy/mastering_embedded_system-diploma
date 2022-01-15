@@ -1,0 +1,32 @@
+#include"stdio.h"
+#include "string.h"
+
+void prime (int num1,int num2);
+int main (){
+	int n1,n2 ;
+	scanf("%d %d",&n1,&n2);
+	prime(n1,n2);
+	return 0;
+}
+void prime (int num1,int num2)
+{
+int i;
+for(i= num1 ;i<=num2 ; i++ )
+{
+	if(i==2|| i==3 || i==5)
+	{
+		printf("%d ",i);
+	}
+	else if(((i%2)==0||(i%3)==0||(i%5)==0))
+	{
+		continue;
+	}
+	else
+	{
+		printf("%d ",i);
+	}
+}
+
+
+}
+
