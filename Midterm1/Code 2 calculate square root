@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+void sqroot(double num);
+
+int main(void)
+{ double x;
+scanf("%lf",&x);
+fflush(stdin);
+sqroot(x);
+return 0;
+}
+
+void sqroot(double num){
+	double rem=0;
+	rem=pow(num,0.5);
+	printf("%.3lf",rem);
+
+
+}
