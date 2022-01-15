@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+void reverse (int num);
+
+int main(void)
+{
+	int x ;
+	scanf("%d",&x);
+	fflush(stdin);
+	reverse(x);
+	return 0;
+}
+void reverse (int num){
+	int rem=0;
+	while(num>0)
+	{
+		rem=num%10;
+		printf("%d",rem);
+		num=num/10;
+	}
+}
