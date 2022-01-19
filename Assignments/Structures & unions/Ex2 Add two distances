@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+struct dist
+{
+	int feet;
+	float inch;
+};
+
+struct dist readdist()
+{
+	struct dist c ;
+	static int i =0;
+	char count[2][4] ={"1st\0","2nd\0"} ;
+	printf("Enter information for %s distance\n",count[i]);
+	fflush(stdin);fflush(stdout);
+	printf("Enter feet: ");
+	fflush(stdin);fflush(stdout);
+	scanf("%d", &c.feet);
+	fflush(stdin);fflush(stdout);
+	printf("Enter inch: ");
+	fflush(stdin);fflush(stdout);
+	scanf("%f", &c.inch);
+	i++;
+	return c ;
+}
+struct dist addist(struct dist a , struct dist b)
+{
+	struct dist s;
+	s.feet=a.feet+b.feet;
+	s.inch=a.inch+b.inch;
+	if(s.inch>=12)
+	{
+		s.inch=s.inch-12.0;
+		++s.feet;
+	}
+	return s ;
+
+}
+int main(void)
+{
+	struct dist c,a,sum;
+	c=readdist();
+	a=readdist();
+	sum=addist(c,a);
+	printf("sum of distance = %.d'-%.1lf\"",sum.feet,sum.inch);
+	return 0;
+}
