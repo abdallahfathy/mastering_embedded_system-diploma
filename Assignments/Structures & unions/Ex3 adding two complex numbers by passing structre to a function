@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+struct Scomplex
+{
+	double m_r;
+	double m_i;
+};
+
+struct Scomplex readcomplex()
+{
+	struct Scomplex c ;
+	static int i =0;
+	char count[2][4] ={"1st\0","2nd\0"} ;
+	printf("for %s complex number\nenter real & imaginary respectively :",count[i]);
+	fflush(stdin);fflush(stdout);
+	scanf("%lf %lf", &c.m_r,&c.m_i);
+	i++;
+	return c ;
+}
+struct Scomplex addcomplex(struct Scomplex a , struct Scomplex b)
+{
+	struct Scomplex s;
+	s.m_r=a.m_r+b.m_r;
+	s.m_i=a.m_i+b.m_i;
+	return s ;
+
+}
+int main(void)
+{
+	struct Scomplex c,a,sum;
+	c=readcomplex();
+	a=readcomplex();
+	sum=addcomplex(c,a);
+	printf("sum = %.1lf + %.1lfi",sum.m_r,sum.m_i);
+	return 0;
+}
