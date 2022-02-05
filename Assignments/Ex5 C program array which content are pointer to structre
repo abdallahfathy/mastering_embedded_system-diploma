@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+struct Semployee{
+	char name [10];
+	int id ;
+};
+int main (){
+	struct Semployee emp1 = {"abdalla",1001},emp2 = {"ahmed",1002},emp3 = {"fathy",1003};
+	struct Semployee * ptr[]={&emp1,&emp2,&emp3};
+	printf("%s %d",ptr[0]->name,ptr[0]->id);
+
+	return 0 ;
+}
+
