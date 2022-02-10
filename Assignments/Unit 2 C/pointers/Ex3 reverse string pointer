@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main (){
+	char m [10];
+	int i;
+	char * ptr ;
+	gets(m);
+	ptr=&m[sizeof(m)-1];
+
+
+	for(i=sizeof(m)-1;i>=0;i--)
+	{
+		printf("%c",*ptr);
+		ptr--;
+	}
+	return 0 ;
+}

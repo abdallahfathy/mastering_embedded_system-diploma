@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main (){
+	int m [10];
+	int i;
+	int * ptr ;
+	ptr=m;
+	for(i=0;i<sizeof(m)/sizeof(m[0]);i++)
+	{
+
+		printf("element - %d : ",i+1);
+		fflush(stdout);
+		scanf("%d",ptr);
+		ptr++;
+	}
+	ptr=&m[sizeof(m)/sizeof(m[0])-1];
+	for(i=sizeof(m)/sizeof(m[0]);i>0;i--)
+	{
+		printf("element - %d : ",i);
+		fflush(stdout);
+		printf("%d \n",*ptr);
+		ptr--;
+	}
+
+	return 0 ;
+}
