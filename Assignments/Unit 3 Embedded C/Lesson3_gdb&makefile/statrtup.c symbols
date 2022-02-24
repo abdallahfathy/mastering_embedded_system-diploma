@@ -1,0 +1,14 @@
+$ arm-none-eabi-nm.exe startup.o
+         U _E_bss_
+         U _E_data_
+         U _E_text_
+         U _S_bss_
+         U _S_data_
+         U _stack_top
+00000000 T default_Handler
+00000000 W Hardfault_Handler
+         U main
+00000000 W MemoryManagement_Handler
+00000000 W NMI_Handler
+0000000c T Reset_Handler
+00000000 D vectors
