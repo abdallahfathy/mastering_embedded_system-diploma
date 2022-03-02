@@ -1,0 +1,13 @@
+20000000 B _E_bss_
+20000000 D _E_data_
+0000017c T _E_text_
+20000000 B _S_bss_
+20000000 D _S_data_
+20001000 B _stack_top
+000000ec T default_Handler
+000000ec W Hardfault_Handler
+00000014 T main
+000000ec W MemoryManagement_Handler
+000000ec W NMI_Handler
+000000f8 T Reset_Handler
+00000000 T vectors
